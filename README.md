@@ -1,1 +1,1 @@
-# food_detection_app
+# food_detection
