@@ -1,5 +1,5 @@
 # Food_Detection
-CISC 4900 Project
+CISC 4900 Project: Food Detection App
 
 Supervisor: Margrethe Horlyck-Romanovsky
 Organization / Department:  Department of Health and Nutrition Sciences
