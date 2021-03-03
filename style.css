@@ -65,47 +65,44 @@ background-color: #4D5758
 
 }
 
-.food_images {
+.food_image{
   position: relative;
-  overflow: hidden;
+ 
   height: 100vh;
   width: 100vw;
 }
 
-.food_image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.food_image.current {
-  opacity: 1;
-}
 
 .food_image .content {
-  position: absolute;
-  height:300px;
-  bottom: 300px;
-  left: -400px;
-  opacity: 0;
-  width: 600px;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #333;
-  padding: 35px;
+ 
+    position: relative;
+    width:600px;
+    height: 300px;
+    margin: auto;
+    top: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    right: 200px;
+    color:black;
+    border-radius: 15px;
 }
 
 .food_image .content h1 {
+  position: relative;
+  top: 28px;
+  left: 28px;
   margin-bottom: 10px;
   font-size: 37px;
 }
+.food_image .content h2 {
+  position: relative;
+  top: 35px;
+  left:35px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
 
-
-.food_image .content .button2{
+.food_image .content .button{
    
     font-family: 'Roboto',sans-serif;
     background-color : #0066EE;
@@ -122,50 +119,7 @@ background-color: #4D5758
    }
 
 
-.food_image.current .content {
-  opacity: 1;
-  transform: translateX(600px);
-  transition: all 0.7s ease-in-out 0.3s;
-}
 
-.buttons button#next {
-  position: absolute;
-  top: 93%;
-  right: 1150px;
-}
-
-.buttons button#prev {
-  position: absolute;
-  top: 93%;
-  left: 40px;
-}
-
-.buttons button {
-  border: 1px solid #C2C2C2;
-  background-color: #F3F5F2;
-  color: black;
-  cursor: pointer;
-  padding: 13px 15px;
-  border-radius: 50%;
-  outline: none;
-}
-
-.buttons button:hover {
-  background-color: #fff;
-  color: #333;
-}
-
-@media (max-width: 500px) {
-  .slide .content {
-    bottom: -300px;
-    left: 0;
-    width: 100%;
-  }
-
-  .slide.current .content {
-    transform: translateY(-300px);
-  }
-}
 
 
 .foodai{
@@ -175,21 +129,11 @@ background-color: #4D5758
 
 
 
-/* Background Images */
+/* Background Image */
  
-.food_image:first-child {
+.food_image{
   background: url('images/5.jpeg') no-repeat
     center top/cover;
 }
-.food_image:nth-child(2) {
-  background: url('images/fruit.jpeg') no-repeat
-    center top/cover;
-}
-.food_image:nth-child(3) {
-  background: url('images/9.jpeg') no-repeat
-    center top/cover;
-}
-.food_image:nth-child(4) {
-  background: url('images/6.jpeg') no-repeat
-    center top/cover;
+
 }
