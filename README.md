@@ -1,4 +1,4 @@
-# food_detection
+# Food_Detection
 CISC 4900 Project
 
 Supervisor: Margrethe Horlyck-Romanovsky
