@@ -13,3 +13,5 @@ A food dection application that aims for users to keep track of the nutirtional 
 The application will be designed and built with Python, HTML, CSS, Javascript, MYSQL Database, using concepts and libraries in machine learning, data science, databases, and web developent. 
 
 Machine Learning library being used is tensorflow for image clisassfiation the application when user uploads image of food. 
+
+#Tools 
