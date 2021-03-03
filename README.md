@@ -14,4 +14,4 @@ The application will be designed and built with Python, HTML, CSS, Javascript, M
 
 Machine Learning library being used is tensorflow for image clisassfiation the application when user uploads image of food. 
 
-#Tools 
+Tools
