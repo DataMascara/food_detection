@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+ 
+
+<link rel="stylesheet" href="../static/account2.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    
+
+
+<div class="wrapper">
+    <div class="sidebar">
+        
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>Profile</a></li>
+            <li><a>About</a></li>
+            
+        </ul> 
+        
+    </div>
+
+    <div class="header">
+	<h1> CALORIES REMAINING </h1>
+
+	<h2 id="number"> 1200 </h2>
+
+	<div class= "Date">
+		<h1 class="date"> </h1>
+	<h4 class ="calendar"><i style="font-size:24px" class="fa">&#xf073;</i> </h4>
+
+	</div>
+
+     </div>
+
+     ///////////////////////////
+
+    <div class="main_content">
+    	 <h2> Search for a food: </h2>
+
+    	  <input type= "text" id ="food" placeholder ="Search food"> <button id= "getText"> Search</button>
+
+    	    <div class= wrapper2 >
+
+
+            <div id= "output2">
+      
+            </div>
+ 
+            </div>
+
+
+
+
+ <div class = "addCalories">
+  <h1> Number of Calories: </h1>
+<div id = "calories" >
+     <h4> 0 </h4>
+
+ </div>
+
+
+ <button class ="btn" onclick="calculate()"> Add Food To Diary</button>
+
+</div>
+ 
+
+
+
+
+    </div>
+
+
+</div>
+  
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+
+        
+</body>
+</html>
