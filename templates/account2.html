@@ -5,11 +5,11 @@
 
  
 
-<link rel="stylesheet" href="../static/account2.css" />
+    <link rel="stylesheet" href="../static/account2.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body onload="username()">
     
 
 
@@ -17,9 +17,13 @@
     <div class="sidebar">
         
         <ul>
-            <li><a>Home</a></li>
-            <li><a>Profile</a></li>
-            <li><a>About</a></li>
+            <form action = "/submit3" method= "POST">
+
+                <li> <input class = "button3" type ="submit" value= "Demo" name=""> </li>
+                  
+                  </form>
+            <li><a><h1>Profile</h1></a></li>
+            <li><a><h1>About</h1></a></li>
             
         </ul> 
         
@@ -35,7 +39,14 @@
 	<h4 class ="calendar"><i style="font-size:24px" class="fa">&#xf073;</i> </h4>
 
 	</div>
-
+    <div id="username">
+        
+       </div>
+       <form action = "/logout" method= "POST">
+       <div class="logout">
+        <button class="outbutton">Log Out</button>
+       </div>
+      </form>
      </div>
 
      ///////////////////////////
@@ -58,31 +69,115 @@
 
 
  <div class = "addCalories">
-  <h1> Number of Calories: </h1>
+ 	 <div id ="foodDetails">
+    <h1> heyyy </h1>
+ </div>
+ <div id ="food1">
+    <h1> heyyy </h1>
+ </div>
+ <div id ="calories1">
+    <h1> heyyy </h1>
+ </div>
+
+  <h2> Number of Calories: </h2>
+
 <div id = "calories" >
      <h4> 0 </h4>
 
  </div>
 
 
- <button class ="btn" onclick="calculate()"> Add Food To Diary</button>
 
+
+ <button class ="btn" onclick="calculate(); logfood(); Info()" > Add Food To Diary</button>
+
+</div>
+
+
+<div class="food_image">
+      
 </div>
  
 
 
 
 
+    <div id = "diary">
+
+
+   
+    	<h1> Your Food Diary: </h1> 
+
+    	
+
+
+
     </div>
 
 
+
+    <!-- <button class ="btn" onclick="Info()" > BUTTON</button> -->
+
+   
+
+
+
 </div>
-  
+
+  <script>
+      function Info(x) {
+           
+      
+         var a = document.getElementById('food1').innerHTML
+         var b = document.getElementById('calories1').innerHTML
+
+            
+           const request = new XMLHttpRequest()
+           request.open('POST', `/UserInfo/${JSON.stringify(a)}/${JSON.stringify(b)}`)
+          
+           
+           request.send()
+           
+          }
+  </script>
+
+<script>
+    function username() {
+
+     
+
+      let a = ` <div id="username2">
+        <h1>Hi, <span style="color: #0a5282">{{result}} </span> </h1>
+        </div>`;
+      document.getElementById('username').innerHTML = a;
+      
+      /////////////////////
+
+      var b = {{calories|tojson}};
+      var c = {{food|tojson}};
+      var length = parseInt("{{l1}}")
+
+        for (i = 0; i < length; i++) {
+          var div1 = document.createElement("div");
+              let str = c[i] + ", 1 serving, " + b[i] + " calories"
+          div1.setAttribute('class', 'foodlog');
+           div1.innerHTML = str;
+           document.getElementById("diary").appendChild(div1);
+          
+        }    
+      
+      
+
+        
+     
+    }
+
+  </script>
+
+
 
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
-
-
 
 
         

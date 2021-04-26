@@ -1,5 +1,5 @@
 n =  new Date();
-var weekday = new Array(7);
+	var weekday = new Array(7);
 weekday[0] = "Sunday";
 weekday[1] = "Monday";
 weekday[2] = "Tuesday";
@@ -52,14 +52,24 @@ da.innerHTML = x + "," + s + " " + d ;
             if(data.foods){
             data.foods.forEach(function(post){
             arr = post.foodNutrients;
+            
 
             arr.forEach(function(todo){
 
               if(todo.nutrientName === "Energy"){
 
-            output+=`
+             
+             var f ="a";
+             var num ="hey";
+            
 
-             <button class = "link" onclick="getCalories(${todo.value})">
+              output+=`
+
+           
+    <button class ="link" onclick='foodDetails(\" ${post.description}, 1 serving, ${todo.value} calories \");
+      getCalories(${todo.value}); calories1(${todo.value}); food1(\"${post.description}\")' >
+                       
+           
             
             <h3>${post.description}<h3>
 
@@ -96,17 +106,74 @@ da.innerHTML = x + "," + s + " " + d ;
 
       ////////////////////////////////////////////////////////////////////////////
 
-
-       function calculate(){
+    function calculate(){
    
     var number = document.getElementById('number').innerHTML
     var calnumber = document.getElementById('calories').innerHTML
      let n = parseInt(number) ;
      let c = parseInt(calnumber);
      let calc = n - c;
+     if(calc <0)
+     document.getElementById("number").style.color = "red";
     document.getElementById("number").innerHTML = calc;
 }
+       
+
+
 
 
 //////////////////////////////////////////////////////////////////////////////////
+
+
+ function foodDetails(x){
+  
+     let output3 = x;  
+      
+     document.getElementById("foodDetails").innerHTML = output3;
+
+      }
+
+
+function logfood(){
+   
+    var div = document.createElement("div");
+    var log = document.getElementById('foodDetails').innerHTML
+   
+
+div.setAttribute('class', 'foodlog');
+div.innerHTML = log;
+
+
+document.getElementById("diary").appendChild(div);
+   
+    
+    
+}
+
+//////////////////////////////////////////////////
+
+
+
+   function calories1(x){
+  
+    let output6 = x;  
+     
+    document.getElementById("calories1").innerHTML = output6;
+
+     }
+
+
+     function food1(x){
+  
+      let output5 = x;  
+       
+      document.getElementById("food1").innerHTML = output5;
+    
+       }
+
+
+
+
+
+
 

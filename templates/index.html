@@ -10,21 +10,23 @@
 
 
 </head>
-<body>
+<body onload="user(); notfound()">
 
        <div class= "navbar">
-        
-              <h1> <a href= "" target = "_blank"> Home</a> &nbsp &nbsp &nbsp <a href= "" target = "_blank"> Demo</a> &nbsp &nbsp &nbsp
+        <div id="user">
+              <a href= "" target = "_blank"> Home</a> &nbsp &nbsp &nbsp <a href= "" target = "_blank"> Demo</a> 
       
       
-                <a href= "" target = "_blank"> Log in</a> &nbsp &nbsp &nbsp 
+              
       
          <form action = "submit2" method= "POST">
       
    <a href= "registration.html" target = "_self"><input class = "button" type ="submit" value= "Sign up" name=""></a> 
                  
           </form>
-                 </h1>
+                 
+              </div>
+
            </div>
 
 
@@ -32,14 +34,22 @@
 
 
 <div class="food_image">
-        <div class="content">
-          <h1>Health starts with what you eat.</h1>
-          <h2>
-           Upload an image of your food to get its nutritional content.
-          </h2>
-          <a href= "" target = "_blank"><input class = "button" type ="submit" value= "Try our Demo" name=""></a> 
-         </div>
-      </div>
+       <form action= "/submit4" method= "POST">
+              <div class="content">
+                     <div id="error">
+                          
+                             </div>
+
+
+           <p> <input type = "text" name= "username"  placeholder= "Username" class="textbox"/></p>
+             
+        <p> <input type = "text" name= "password" placeholder= "Password" class="textbox" /></p>
+      
+                <a href= "" target = "_blank"><input class = "button" type ="submit" value= "Log In" name=""></a> 
+               </div>
+            </div>
+               
+               </form>
 
         
      
@@ -50,20 +60,51 @@
 
 
 
+<script>
+       function user() {
+           
+        if ("{{flash}}" == "True") {
+
+        
+       let a = `<h3 style="font-weight:normal;">Hi, <span style="color: #0a5282">{{result}} </span> &nbsp &nbsp<a href= "" target = "_blank"> Home</a> &nbsp<a href= "" target = "_blank"> Demo</a>
+              &nbsp<a href= "" target = "_blank"> Log Out</a></h3>`;
+        
+         document.getElementById('user').innerHTML = a;
+        }
+       }
+   
+     </script>
 
 
 
+       <script>
+       function notfound() {
+           
+        if ("{{found}}" == "false") {
 
-    <div class = "foodai">
-           <h1> FOODAI GOES HERE </h1>
-    </div>
-
-
+        
     
+       let e = ` <h1>The username is not connected to an account</h1>`
+        
+         document.getElementById('error').innerHTML = e;
+        
+       }
+         }
+   
+     </script>
+
+
+
+
+
+
+
+
+
+
 
 
   
-
 
 
 </body>

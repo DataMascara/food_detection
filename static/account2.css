@@ -1,285 +1,432 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Josefin Sans', sans-serif;
-  }
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #f3f5f9;
+   width: 100%;
+   height: 100%;
+   overflow-x: hidden;
+
+}
+
+
+
+
+.wrapper{
+  display: flex;
+  position: relative;
+ 
   
-  body{
-     background-color: #f3f5f9;
-     width: 100%
-     height: 100%;
-     overflow-x: hidden;
+}
+
+
+
+
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #005faf;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}  
+.wrapper .sidebar ul li h1{
+  position: relative;
+  left:50px;
+  font-size:20px;
+  font-weight:normal;
+}     
+
+.wrapper .sidebar ul li:first-child{
   
-  }
+  padding:0;
   
-  
-  
-  
-  .wrapper{
-    display: flex;
-    position: relative;
-   
+} 
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #0e94d4;
+}
     
-  }
-  
-  
-  
-  
-  
-  .wrapper .sidebar{
-    width: 200px;
-    height: 100%;
-    background: #005faf;
-    padding: 30px 0px;
-    position: fixed;
-  }
-  
-  
-  
-  .wrapper .sidebar ul li{
-    padding: 15px;
-    border-bottom: 1px solid #bdb8d7;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    border-top: 1px solid rgba(255,255,255,0.05);
-  }    
-  
-  .wrapper .sidebar ul li a{
-    color: #bdb8d7;
-    display: block;
-  }
-  
-  .wrapper .sidebar ul li a .fas{
-    width: 25px;
-  }
-  
-  .wrapper .sidebar ul li:hover{
-    background-color: #0e94d4;
-  }
-      
-  .wrapper .sidebar ul li:hover a{
-    color: #fff;
-  }
-   
-  
-  
-  .wrapper .main_content{
-    width: 900px;
-    position: absolute;
-    right: 30px;
-    top: 60px;
-    background-color: #DEFAF9;
-  
-    height: 1000px;
-    border: thin solid #DDDDDD;
-    
-  }
-  
-  
-  .wrapper .header {
-    width: 900px;
-    position: absolute;
-    left: 220px;
-    top: 0px;
-    background-color: #f3f5f9; 
-   /*background-color: red; */
-    height: 50px;
-    padding: 5px;
-  
-   
-  
-  }
-  
-  .wrapper .header h1{
-    position: relative;
-    font-size: 18px;
-    left:30px;
-    top:5px;
-    font-family: Helvetica;
-    font-weight: normal;
-  }
-   
-  .wrapper .header h2{
-    position: relative;
-    font-size: 30px;
-    left:240px;
-    top:-20px;
-    font-family: Helvetica;
-    
-    color:#61D642;
-   
-  }
-  .wrapper .header .Date{
-    
-    width: 500px;
-    position: absolute;
-    left: 350px;
-    top:5px;
-    
-    background-color: #f3f5f9; 
-   
-    height: 50px;
-    
-   
-  }
-  .wrapper .header .Date .date{
-    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+
+
+.wrapper .main_content{
+  width: 900px;
   position: absolute;
+  right: 30px;
+  top: 60px;
+  background-color: #DEFAF9;
+
+  height: 1000px;
+  border: thin solid #DDDDDD;
   
-  top:10px; 
-  font-size: 20px;
-  left: 100px;
-    
-   
-  }
-  
-  .wrapper .header .Date .calendar{
-    
+}
+
+
+.wrapper .header {
+  width: 900px;
   position: absolute;
-  left: 300px;
+  left: 220px;
+  top: 0px;
+  background-color: #f3f5f9; 
+ /*background-color: red; */
+  height: 50px;
+  padding: 5px;
+
+ 
+
+}
+
+.wrapper .header h1{
+  position: relative;
+  font-size: 18px;
+  left:30px;
+  top:5px;
+  font-family: Helvetica;
+  font-weight: normal;
+}
+ 
+.wrapper .header h2{
+  position: relative;
   font-size: 30px;
-  top:-1px;
-  color:#0688B7;
+  left:240px;
+  top:-20px;
+  font-family: Helvetica;
   
-  }
-  ////////////////////////////////////////////////////////////
+  color:#61D642;
+ 
+}
+.wrapper .header .Date{
+  
+  width: 500px;
+  position: absolute;
+  left: 350px;
+  top:5px;
+  
+  background-color: #f3f5f9; 
+ 
+  height: 50px;
+  
+ 
+}
+.wrapper .header .Date .date{
+  
+position: absolute;
+
+top:10px; 
+font-size: 20px;
+left: 100px;
+  
+ 
+}
+
+.wrapper .header .Date .calendar{
+  
+position: absolute;
+left: 280px;
+font-size: 30px;
+top:-1px;
+color:#0688B7;
+
+}
+
+.wrapper .header #username2{
+  
+  position: absolute;
+  top:5px;
+  width: 350px;
+  height: 50px;
+  left: 700px;
+}
+.wrapper .header #username2 h1{
+  
+  position: relative;
+  left: 70px;
+  font-size: 25px;
+ 
+}
+.wrapper .header .logout{
+  
+  width: 350px;
+  position: absolute;
+  left: 900px;
+  top:5px;
+  background-color: #f3f5f9; 
+  height: 50px;
   
   
-  table, td {
+ 
+}
+.outbutton {
+    position:relative;
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+    font-size:20px;
+    top:10px;
+    left:35px;
+
+
+}
+
+.outbutton:hover{
+  color:red;
+}
+
+
+table, td {
+  border: 1px solid black;
+  
+}
+
+.main_content h2{
+  font-weight: normal;
+  position: relative;
+  top:40px;
+  left:20px;
+  color:#003C75;
+}
+
+.main_content #food{
+  width: 300px;
+  height:27px;
+  padding:5px;
+  position: relative;
+  top:60px;
+  left:20px;
+}
+
+.main_content #getText{
+
+   position: relative;
+   background-color : #40A35B;
+   top:60px;
+   left:30px;
+    color:white;
+    padding: 0;
+    border: none;
+    font-size :15px;
+    width: 75px;
+    height: 25px;
+    border-radius: 4px;
+}
+
+
+
+
+.wrapper2 {
+   
+    overflow:hidden;
+    overflow-y: scroll;
+    height: 350px; 
     border: 1px solid black;
-    
-  }
-  
-  .main_content h2{
-    font-weight: normal;
-    position: relative;
-    top:40px;
-    left:20px;
-    color:#003C75;
-  }
-  
-  .main_content #food{
-    width: 300px;
-    height:27px;
-    padding:5px;
-    position: relative;
-    top:60px;
-    left:20px;
-  }
-  
-  .main_content #getText{
-  
-     position: relative;
-     background-color : #40A35B;
-     top:60px;
-     left:30px;
-      color:white;
-      padding: 0;
-      border: none;
-      font-size :15px;
-      width: 75px;
-      height: 25px;
-      border-radius: 4px;
-  }
-  
-  
-  
-  
-  .wrapper2 {
-     
-      overflow:hidden;
-      overflow-y: scroll;
-      height: 350px; 
-      border: 1px solid black;
-      width: 450px;
-      background-color: white;
-      position: relative;
-      left:15px;
-      top:100px;
-  }
-  
-  .wrapper2 #output2{
-    
-    padding: 5px;
-    font-size: 14px;
-  }
-  
-  .link:hover{
-  background-color: #E3EAED;
-  
-  }
-  
-  .link{
+    width: 450px;
     background-color: white;
-    width: 425px;
-    height:70px;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-  
-  }
-  
-  
-  .link h3{
-  
-    color:#06A6E0;
-    font-weight: normal;
-  }
-  
-  .link h4{
-  
-     color:#787F83;
-    font-weight: normal;
-  }
-  
-  .addCalories {
-     
-      overflow:hidden;
-      overflow-y: scroll;
-      height: 350px; 
-      
-      width: 400px;
-      background-color: white;
-      position: relative;
-      left: 475px;
-      top:-250px;
-      background-color: #F0F0F0;
-       
-  }
-  
-  .addCalories h1{
-    font-weight:normal;
-    font-size: 25px;
     position: relative;
-    left: 50px;
+    left:15px;
     top:100px;
-    color:#0a5282;
-  }
-  .addCalories #calories{
-     position: relative;
-     left:290px;
-     top:71px;
-     font-size: 25px;
-     font-weight: normal;
-  }
+}
+
+.wrapper2 #output2{
   
-  .addCalories .btn{
+  padding: 5px;
+  font-size: 14px;
+}
+
+.link:hover{
+background-color: #E3EAED;
+
+}
+
+.link{
+  background-color: white;
+  width: 425px;
+  height:70px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+}
+
+
+.link h3{
+
+  color:#06A6E0;
+  font-weight: normal;
+}
+
+.link h4{
+
+   color:#787F83;
+  font-weight: normal;
+}
+
+.addCalories {
+   
+    overflow:hidden;
+    overflow-y: scroll;
+    height: 350px; 
+    width: 400px;
+    background-color: white;
+    position: relative;
+    left: 475px;
+    top:-250px;
+    background-color: #F0F0F0;
+
+     
+}
+
+.addCalories h2{
+  font-weight:normal;
+  font-size: 25px;
+  position: relative;
+  left: 50px;
+  top:100px;
+  color:#0a5282;
+}
+.addCalories #calories{
+   position: relative;
+   left:290px;
+   top:71px;
+   font-size: 25px;
+   font-weight: normal;
+}
+
+.addCalories .btn{
+
+   position: relative;
+   left: 120px;
+   top:150px;
+   background-color : #40A35B;
+   color:white;
+    padding: 0;
+    border: none;
+    font-size :15px;
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+
+
+
+#diary {
+   
+    position: relative;
+    top:-400px;
+    height: 300px;
+   
+    
+    
+     
+}
+
+#diary h1{
+  position: relative;
+  left: 20px;
+  top:20px;
+  color:#0a5282;
+  font-weight:normal;
+  font-size: 30px;
   
-     position: relative;
-     left: 120px;
-     top:150px;
-     background-color : #40A35B;
-     color:white;
-      padding: 0;
-      border: none;
-      font-size :15px;
-      width: 150px;
-      height: 40px;
-      border-radius: 4px;
-  }
+
+}
+
+
+.foodlog{
+  position:relative;
+  color: #096397;
+  left:20px;
+  width: 500px;
+  height:35px;
+  padding:5px;
+  top:25px;
+  border:0.01em solid #CBC9C8;
+  background-color:#F0F0F0;
+
+ 
+}
+
+
+ 
+
+
+.button3{
+  position:relative;
+  right:15px;
+  border:none;
+  background: #005faf;
+  color: #bdb8d7;
+  width: 215px;
+  height:40px;
+  font-size:20px;
+
+}
+
+.button3:hover{
+background-color: #0e94d4;
+color:white;
+
+}
+
+#foodDetails{
+  font-size: 1px;
+  color: #F0F0F0;
+}
+#food1{
+  font-size: 1px;
+  color: #F0F0F0;
+}
+#calories1{
+  font-size: 1px;
+  color: #F0F0F0;
+}
+
+.food_image{
+  background: url('images/salad.jpg') no-repeat
+    
+    center top/cover;
+    height:200px;
+    width:400px;
+    top:-740px;
+    left:450px;
+    position:relative;
+     background-size: 250px;
   
-  
-  /////////////////////////////////////////////////////////////
+}
+
+
+
+
+
+
   
